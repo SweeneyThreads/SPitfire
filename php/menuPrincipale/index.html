@@ -1,0 +1,106 @@
+<?php
+session_start();
+if (!isset($_SESSION['auth']) or $_SESSION['auth']==NULL) {
+	header("Location: login.php");
+}
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>SweeneyThreads</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentazione prodotta per il corso Ingegneria del Software a.a 2015-2016">
+	<meta name="keywords" content="Ingegneria del Software, Analisi dei requisiti, Progettazione, SweeneyThreads">
+	<meta name="author" content="Bonato Paolo, Bortolazzo Matteo, Biggeri Mattia, Maino Elia, Nicoletti Luca, Padovan Tommaso, Tommasin Davide">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="../stile.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<div class="jumbotron text-center">
+  <h1>Sweeney Threads</h1> 
+  <h3>as a service</h3>
+</div>
+
+<div id="menu" class="container-fluid ">
+  <div class="row text-center">
+    <div class="col-sm-12">
+    <h2>Seleziona un'opzione</h2><br><br>
+    </div>
+    </div>
+    <div class="row text-center">
+    <div class="col-sm-6">
+	<form method="GET" action="roleparser">
+		<div class="btn-group">
+		<button type="submit" class="btn btn-primary">Ruoli e Parser</button>
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      		<span class="caret"></span>
+    	</button>
+    	<ul class="dropdown-menu" role="menu">
+    		<li><a href="roleparser/gest_ruoli.php">Rotazione dei ruoli</a></li>
+      		<li><a href="roleparser/parser.php">Parser</a></li>
+      	</ul>
+		</div>
+	</form>
+	</br>
+	</div>
+	<div class="col-sm-6">
+	<form method="GET" action="requirement/requisiti.php">
+		<div class="btn-group">
+		<button type="submit" class="btn btn-primary">Requisiti</button>
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      		<span class="caret"></span>
+    	</button>
+    	<ul class="dropdown-menu" role="menu">
+    		<li><a href="requirement/aggiungiRequisito.php">Inserisci un requisito</a></li>
+      		<li><a href="requirement/milestones.php">Milestones</a></li>
+      	</ul>
+		</div>
+	</form>
+	</br>
+	</div>
+	</div>
+	<div class="row text-center">
+	<div class="col-sm-6">
+	<form method="GET" action="documentation_tools">
+		<div class="btn-group">
+		<button type="submit" class="btn btn-primary">Tool per la Documentazione</button>
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      		<span class="caret"></span>
+    	</button>
+    	<ul class="dropdown-menu" role="menu">
+    		<li><a href="documentation_tools/glossario.php">Tool Glossario</a></li>
+      		<li><a href="documentation_tools/documenti_latex.php">Tabella Repo</a></li>
+      		<li><a href="documentation_tools/metric_calc.php">Calcolatore Metriche</a></li>
+      	</ul>
+		</div>
+	</form>
+	</br>
+	</div>
+    <div class="col-sm-6">
+	<form method="GET" action="logetc/changelog.html">
+		<div class="btn-group">
+		<button type="submit" class="btn btn-primary">Log del Sito</button>
+		</div>
+	</form>
+	</br>
+	</div>
+	</div>
+</div>
+</div>
+
+<div id="githubio" class="container-fluid bg-gray">
+  <div class="row text-center">
+    <div class="col-sm-12">
+	<a href="http://sweeneythreads.github.io">Torna a sweeneythreads.github.io</a>
+	</div>
+</div>
+</div>
+<body>
+</html>

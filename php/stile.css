@@ -1,0 +1,75 @@
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181;
+}
+h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px;
+}  
+.jumbotron {
+  background-color: #f4751e;
+  color: #fff;
+  padding: 60px 25px;
+  font-family: Montserrat, sans-serif;
+}
+.container-fluid {
+  padding: 60px 50px;
+}
+.bg-grey {
+  background-color: #f6f6f6;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #f4751e;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+.navbar ul {
+	padding-top: 15px;
+	list-style-type: none;
+}
+.navbar li a{
+	padding: 18px;
+	text-decoration: none;
+  color: #fff !important;
+}
+.navbar-nav li:hover{
+  background-color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f4511e !important;
+  background-color: #fff !important;
+}
+.navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+.icon-bar {
+	background-color: #fff !important;
+}
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f4511e;
+}
+.btn-primary {
+	border-color: #696969;
+	background-color: #a8a8a8;
+}
+.btn-primary:hover, .btn-primary:active {
+	background-color: #696969;
+}

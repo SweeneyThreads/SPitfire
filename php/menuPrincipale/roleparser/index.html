@@ -1,0 +1,71 @@
+<?php
+session_start();
+var_dump($_SESSION);
+if (!isset($_SESSION['auth']) or $_SESSION['auth']==NULL) {
+	header("Location: ../login.php");
+}
+?>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Ruoli e Parser</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Documentazione prodotta per il corso Ingegneria del Software a.a 2015-2016">
+	<meta name="keywords" content="Ingegneria del Software, Analisi dei requisiti, Progettazione, SweeneyThreads">
+	<meta name="author" content="Bonato Paolo, Bortolazzo Matteo, Biggeri Mattia, Maino Elia, Nicoletti Luca, Padovan Tommaso, Tommasin Davide">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	<link href="../../stile.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="navbar-nav navbar-right">
+				<li><a href=".." id="home">MENU PRINCIPALE</a></li>
+				<li><a href="gest_ruoli.php" id="rotaz">ROTAZIONE RUOLI</a></li>
+				<li><a href="parser.php" id="parser">PARSER</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<div id="descrizione" class="container-fluid ">
+	<div class="row text-center">
+		<div class="col-sm-12">
+		<h2>Impostazioni ruoli e Teamwork_to_projectLibre Parser</h2>
+		<p>
+								Con questo tool si possono assegnare i ruoli ai componenti del gruppo.
+								Poi nella tab parser si può caricare un file XML esportato da Teamwork e 
+								trasformarlo in un file compatibile con projectLibre, del tutto equivalente ma 
+								con i task assegnati ai ruoli e non alle persone.
+							</p>
+	</div>
+</div>
+</div>
+
+<div id="githubio" class="container-fluid bg-gray">
+	<div class="row text-center">
+		<div class="col-sm-12">
+	<a href="http://sweeneythreads.github.io">Torna a sweeneythreads.github.io</a>
+	</div>
+</div>
+</div>
+
+<body>
+</html>
+
+
