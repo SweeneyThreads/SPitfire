@@ -8,11 +8,9 @@ $conn=connect();
 
 if (isset($_POST['ID']) and isset($_POST['Nome'])) {
 	$id = $_POST['ID'];
-	//$vers = $_POST['Versione'];
 	$nome = $_POST['Nome'];
 	$descr = $_POST['Descrizione'];
 	$fonte = $_POST['Fonte'];
-	//$mil = $_POST['Milestone'];
 	$query="INSERT INTO Requisiti(ID,Nome,Descrizione,Fonte) VALUES('$id','$nome','$descr','$fonte')";
 	$result=mysql_query($query,$conn)
 		or die("Inserimento nella tabella requisiti fallito" . mysql_error($conn));

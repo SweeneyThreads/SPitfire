@@ -15,7 +15,8 @@ $arrDocumentiRepo=array(
 	'Norme di progetto' => 'https://raw.githubusercontent.com/SweeneyThreads/Actorbase/master/LaTeX/Norme%20di%20progetto.tex',
 	'Piano di progetto' => 'https://raw.githubusercontent.com/SweeneyThreads/Actorbase/master/LaTeX/Piano%20di%20progetto.tex',
 	'Piano di qualifica' => 'https://raw.githubusercontent.com/SweeneyThreads/Actorbase/master/LaTeX/Piano%20di%20qualifica.tex',
-	'Studio di fattibilit&agrave' => 'https://raw.githubusercontent.com/SweeneyThreads/Actorbase/master/LaTeX/Studio%20di%20fattibilit%C3%A0.tex'
+	'Studio di fattibilit&agrave' => 'https://raw.githubusercontent.com/SweeneyThreads/Actorbase/master/LaTeX/Studio%20di%20fattibilit%C3%A0.tex',
+	'Specifica Tecnica' => 'https://raw.githubusercontent.com/SweeneyThreads/Actorbase/master/LaTeX/Specifica%20tecnica.tex'
 );
 
 

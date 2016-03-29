@@ -37,15 +37,7 @@ function contiene($needle,$haystack) {
 //svuoto la tabella
 $result=mysql_query("DELETE FROM derivazRequisiti WHERE 1");
 
-/*
-foreach ($arrRequisiti as $idPadre => $codicePadre) {
-	foreach ($arrRequisiti as $idFiglio => $codiceFiglio) {
-		if (contiene($codicePadre,$codiceFiglio)) {
-			$query="INSERT INTO derivazRequisiti(padre,figlio) VALUES('$idPadre','$idFiglio')";
-			$result=mysql_query($query);
-		}
-	}
-}*/
+
 
 
 foreach ($arrRequisiti as $idPadre => $codicePadre) {

@@ -1,11 +1,12 @@
 <?php
 session_start();
-var_dump($_SESSION);
 if (!isset($_SESSION['auth']) or $_SESSION['auth']==NULL) {
 	header("Location: ../login.php");
 }
 require_once("../lib/htmlgenerator.php");
 require_once("../lib/phplib.php");
+require_once("lib/class_conflitti.php");
+require_once("lib/infoRepo.php");
 $conn=connect();
 
 
@@ -16,6 +17,13 @@ $num=$num['NumRequisiti'];
 
 
 $linkPadre=getPadre($_GET['padre'],$conn);
+
+$stringaConflitti='';
+if (!isset($_GET['padre']) || $_GET['padre']=='' || $_GET['padre']==NULL) {
+	if (Conflitti::detectMissing($conn,$DEFAULT_REPO_LOCATION)) {
+		$stringaConflitti="<p style=\"background-color:tomato;\">Rilevati conflitti tra DB e Repository. <a href=\"conflictChecker.php\">Risolvi Conflitti</a></p>";
+	}
+}
 
 
 echo <<<END
@@ -64,6 +72,7 @@ echo <<<END
   <form method="POST" action="process_setDone.php">
   <h2>Requisiti</h2>
   <p>La tabella sottostante contiene tutti i requisiti individuati:  (tot $num)</p>
+  $stringaConflitti
   <a href="requisiti.php?padre=$linkPadre">Torna al Padre</a>
   <table class="table table-striped table-bordered">
 	<thead>
