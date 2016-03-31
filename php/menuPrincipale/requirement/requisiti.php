@@ -154,6 +154,8 @@ echo <<<END
 
 </form>
 
+<br />
+<a href="generateTracciamentoRequisiti.php">Genera Latex Tracciamento Requisiti</a>
 
 <body>
 </html>
